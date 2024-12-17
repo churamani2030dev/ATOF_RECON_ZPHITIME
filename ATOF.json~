@@ -1,0 +1,123 @@
+[
+    {
+        "name": "AHDC::Hits",
+        "group": 23000,
+        "item": 23,
+        "info": "Raw Hits",
+        "entries": [
+            {
+                "name": "ID",
+                "type": "S",
+                "info": "Hit ID"
+            },
+            {
+                "name": "layer",
+                "type": "B",
+                "info": "Layer number"
+            },
+            {
+                "name": "superlayer",
+                "type": "B",
+                "info": "Superlayer number"
+            },
+            {
+                "name": "wire",
+                "type": "I",
+                "info": "Wire number"
+            },
+            {
+                "name": "Doca",
+                "type": "D",
+                "info": "Distance of closest approach (mm)"
+            }
+        ]
+    },
+{
+    "name": "ATOF::adc",
+    "group": 22500,
+    "item": 18,
+    "info": "Raw ADC Hits for ATOF",
+    "entries": [
+        {
+            "name": "sector",
+            "type": "B",
+            "info": "Sector of the hit"
+        },
+        {
+            "name": "layer",
+            "type": "B",
+            "info": "Layer number"
+        },
+        {
+            "name": "component",
+            "type": "S",
+            "info": "Component ID"
+        },
+        {
+            "name": "order",
+            "type": "B",
+            "info": "Order (0 = inner, 1 = outer)"
+        },
+        {
+            "name": "ADC",
+            "type": "I",
+            "info": "ADC value of the hit"
+        },
+        {
+            "name": "time",
+            "type": "L",
+            "info": "Time of the hit in nanoseconds"
+        },
+        {
+            "name": "ped",
+            "type": "S",
+            "info": "Pedestal value for the hit"
+        }
+    ]
+},
+
+    
+    {
+        "name": "ATOF::adc",
+        "group": 22500,
+        "item": 18,
+        "info": "Raw ADC Hits for ATOF",
+        "entries": [
+            {
+                "name": "sector",
+                "type": "B",
+                "info": "Sector of the hit"
+            },
+            {
+                "name": "layer",
+                "type": "B",
+                "info": "Layer number"
+            },
+            {
+                "name": "component",
+                "type": "S",
+                "info": "Component ID"
+            },
+            {
+                "name": "order",
+                "type": "B",
+                "info": "Order (0 = inner, 1 = outer)"
+            },
+            {
+                "name": "ADC",
+                "type": "I",
+                "info": "ADC value of the hit"
+            },
+            {
+                "name": "time",
+                "type": "F",
+                "info": "Time of the hit in nanoseconds"
+            },
+            {
+                "name": "ped",
+                "type": "F",
+                "info": "Pedestal value for the hit"
+            }
+        ]
+    }
+]

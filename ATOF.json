@@ -1,0 +1,138 @@
+[
+    {
+        "name": "AHDC::Hits",
+        "group": 23000,
+        "item": 23,
+        "info": "Raw Hits",
+        "entries": [
+            {
+                "name": "ID",
+                "type": "S",
+                "info": "Hit ID"
+            },
+            {
+                "name": "layer",
+                "type": "B",
+                "info": "Layer number"
+            },
+            {
+                "name": "superlayer",
+                "type": "B",
+                "info": "Superlayer number"
+            },
+            {
+                "name": "wire",
+                "type": "I",
+                "info": "Wire number"
+            },
+            {
+                "name": "Doca",
+                "type": "D",
+                "info": "Distance of closest approach (mm)"
+            }
+        ]
+    },
+    {
+        "name": "ATOF::rec",
+        "group": 22500,
+        "item": 17,
+        "info": "Reconstructed Clusters for ATOF",
+        "entries": [
+            {
+                "name": "id",
+                "type": "S",
+                "info": "Unique identifier for the cluster"
+            },
+            {
+                "name": "nhits",
+                "type": "S",
+                "info": "Number of hits associated with this cluster"
+            },
+            {
+                "name": "z",
+                "type": "F",
+                "info": "Z-coordinate of the cluster in millimeters (mm)"
+            },
+            {
+                "name": "phi",
+                "type": "F",
+                "info": "Azimuthal angle (phi) of the cluster in radians (rad)"
+            },
+            {
+                "name": "time",
+                "type": "F",
+                "info": "Time of the cluster in nanoseconds (ns)"
+            },
+            {
+                "name": "energy",
+                "type": "F",
+                "info": "Energy deposited in the cluster in MeV"
+            },
+            {
+                "name": "sector",
+                "type": "B",
+                "info": "Sector of the hit"
+            },
+            {
+                "name": "layer",
+                "type": "B",
+                "info": "Layer of the hit"
+            },
+            {
+                "name": "component",
+                "type": "S",
+                "info": "Component ID of the hit"
+            },
+            {
+                "name": "order",
+                "type": "B",
+                "info": "Order of the hit (0 = inner, 1 = outer)"
+            },
+            {
+                "name": "ADC",
+                "type": "I",
+                "info": "Total ADC value for the cluster"
+            },
+            {
+                "name": "ped",
+                "type": "F",
+                "info": "Average pedestal value for the cluster"
+            },
+            {
+                "name": "ZBar",
+                "type": "F",
+                "info": "Z position of bar hits"
+            },
+            {
+                "name": "ZWedge",
+                "type": "F",
+                "info": "Z position of wedge hits"
+            },
+            {
+                "name": "deltaZ",
+                "type": "F",
+                "info": "Delta Z between bar and wedge hits"
+            },
+            {
+                "name": "deltaPhi",
+                "type": "F",
+                "info": "Delta Phi for the cluster"
+            },
+            {
+                "name": "deltaTime",
+                "type": "F",
+                "info": "Delta Time for the cluster"
+            },
+            {
+                "name": "barHits",
+                "type": "S",
+                "info": "Number of bar hits"
+            },
+            {
+                "name": "wedgeHits",
+                "type": "S",
+                "info": "Number of wedge hits"
+            }
+        ]
+    }
+]

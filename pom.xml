@@ -1,128 +1,53 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
+ <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- Basic project information -->
     <groupId>org.example</groupId>
-    <artifactId>ZPosition-reader</artifactId>
-    <version>11.0.2-SNAPSHOT</version>
+    <artifactId>atof-reader</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <properties>
-        <jfreechart.version>1.5.3</jfreechart.version>
-        <jnp-hipo4.version>4.0-SNAPSHOT</jnp-hipo4.version>
-        <smile.version>2.6.0</smile.version>
-        <log4j.version>2.17.1</log4j.version>
-        <slf4j.version>1.7.30</slf4j.version>
-        <clas-reco.version>10.1.1-SNAPSHOT</clas-reco.version>
-        <clas-geometry.version>10.1.1-SNAPSHOT</clas-geometry.version>
-        <alert-geometry.version>1.0-SNAPSHOT</alert-geometry.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
-
+    <!-- Dependencies required for the project -->
     <dependencies>
-        <!-- JNP Hipo4 dependency for working with HIPO files -->
+        <!-- HIPO library dependency for handling HIPO files -->
         <dependency>
             <groupId>org.jlab.jnp</groupId>
             <artifactId>jnp-hipo4</artifactId>
-            <version>${jnp-hipo4.version}</version>
+            <version>4.0-SNAPSHOT</version>
         </dependency>
-
-        <!-- JFreeChart dependency for plotting -->
+        <!-- JFreeChart dependency for plotting graphs -->
         <dependency>
             <groupId>org.jfree</groupId>
             <artifactId>jfreechart</artifactId>
-            <version>${jfreechart.version}</version>
-        </dependency>
-
-        <!-- JCommon (needed for JFreeChart) -->
-        <dependency>
-            <groupId>org.jfree</groupId>
-            <artifactId>jcommon</artifactId>
-            <version>1.0.24</version>
-        </dependency>
-
-        <!-- Smile dependencies for DBSCAN clustering and math operations -->
-        <dependency>
-            <groupId>com.github.haifengl</groupId>
-            <artifactId>smile-core</artifactId>
-            <version>${smile.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.haifengl</groupId>
-            <artifactId>smile-plot</artifactId>
-            <version>${smile.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.haifengl</groupId>
-            <artifactId>smile-math</artifactId>
-            <version>${smile.version}</version>
-        </dependency>
-
-        <!-- Log4j for logging -->
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>${log4j.version}</version>
-        </dependency>
-
-        <!-- CLAS12 Reconstruction dependencies -->
-        <dependency>
-            <groupId>org.jlab.clas</groupId>
-            <artifactId>clas-reco</artifactId>
-            <version>${clas-reco.version}</version>
-        </dependency>
-
-        <!-- CLAS12 Geometry dependencies -->
-        <dependency>
-            <groupId>org.jlab.clas</groupId>
-            <artifactId>clas-geometry</artifactId>
-            <version>${clas-geometry.version}</version>
-        </dependency>
-
-        <!-- ALERT Geometry dependencies -->
-        <dependency>
-            <groupId>org.jlab.clas12.detector</groupId>
-            <artifactId>clas12detector-alert</artifactId>
-            <version>${alert-geometry.version}</version>
-        </dependency>
-
-        <!-- SLF4J for logging support with Log4j -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>${slf4j.version}</version>
+            <version>1.5.3</version>
         </dependency>
     </dependencies>
 
-    <!-- JLab repository to pull JNP libraries -->
+    <!-- Repositories where Maven can find dependencies -->
     <repositories>
         <repository>
-            <id>clas12maven</id>
-            <url>https://clasweb.jlab.org/clas12maven</url>
+            <id>jhep-maven</id>
+            <url>https://clasweb.jlab.org/jhep/maven</url>
         </repository>
     </repositories>
 
+    <!-- Build configurations and plugins -->
     <build>
         <plugins>
-            <!-- Compiler plugin to specify Java version -->
+            <!-- Maven Compiler Plugin for compiling Java source code -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
+                    <source>8</source>
+                    <target>8</target>
                 </configuration>
             </plugin>
 
-            <!-- Maven assembly plugin to bundle dependencies into a single JAR -->
+            <!-- Maven Assembly Plugin to create a JAR with dependencies -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
@@ -130,7 +55,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.example.ATOFHit_Reco_Cluster</mainClass>
+                            <mainClass>org.example.ATOFDataReader</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

@@ -1,3 +1,4 @@
 org/example/Hit.class
-org/example/ATOFHit_Reco_Cluster.class
-org/example/ATOFHit_Reco_Cluster$Hit.class
+org/example/ATOFDataReader$Hit.class
+org/example/ATOFDataReader$Cluster.class
+org/example/ATOFDataReader.class
